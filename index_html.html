@@ -1,0 +1,153 @@
+<!-- elements: html, body, h1. They are content holders. But some are stand alone like <!Doctype html>-->
+<!-- tags: <h1> </h1> - these are open and close tags -->
+<!-- h stands for header elements-->
+<!-- p stands for paragraph elements -->
+<!-- Nesting: Elements nested inside another elements -->
+<!-- main tag: to highlight the main area of our page -->
+<!-- Some elements have only one tag and NO CLOSING TAG. Example: img tag -->
+<!-- HTML attributes: they are special words used inside the opening tag of an element to control its behavior -->
+<!-- Attributes - THE ORDER OF ATTRIBUTES DOES NOT MATTER
+    src: source of the image [values: they are inside of the quotation mark]
+    alt: a way to describe the image with text
+    NOTE: ALWAYS USE AN ALT ATTRIBUTE IN EVERY IMG
+    href: put the website you are linking to. [NOTE: USE # AS A PLACEHOLDER] 
+    target: used for a link to open in a new tab
+    action: to indicate where to submit the form data
+    type: [text: this provides a text book] [submit: the button submit] [radio: the button radio (oval selector)] [checkbox: provides the checkbox for a list]
+    placeholder: is a light gray text that appears in an input text box
+    require: when used, the user is required to provide a given input before they can click the submit button
+    name [to be used with input element] - makes sure that when one radio button is clicked, the other cannot be highlighted
+    id: allows us to identify a given attribute
+    for: good practice to set [for] attribute on a label element 
+    checked: can be used to make sure by default, a given checkbox or radio button is selected 
+    class: used to identify/style a given div element in CSS
+    lang (language): [lang="en"] used to specify the langauge of the website. en=english
+ -->
+<!-- Elements
+- a (anchor) element: provides a link to another website
+- ul: for unordered lists
+- li: to list items
+- ol: ordered list 
+- strong: to bold a word(s)
+- em: to italicize(emphasized) a word(s)
+- form: to provide a form
+- input: allows user to enter input
+- button: provide a button of a given type
+- label: allows functionality to the text in a radio button. When text is clicked, the radio button is highlighted
+- br: for linebreaks
+- div (division): it is a general purpose container for other elements. They are often used to target with CSS (styling)
+- footer: used to identify certain portion of our webpage 
+- small: make text smaller
+- head: use to contain metadata of your website
+- title: to give a name to the website on google tab
+-->
+
+<!-- CSS
+- Inline style: use style attribute
+- style: use style element at the beginning of page and style of the elements of a given tag
+- To identify a class, use .(dot) before the class name
+- link: linked CSS stylesheet to html file
+- rel Attributes: tells the link tag/element that this is a stylesheet
+- type Attributes: tells the link this is a css
+ -->
+
+<!-- 3 Methods for adding CSS
+- Inline CSS: directly in the html element (NO!)
+- Internal CSS: Using <style> tags within a single document 
+- External CSS: Linking an external .css file
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CatPhotoApp</title>
+    <!-- <style>
+      p {
+        color: orange;
+      }
+      h2 {
+        color: green;
+      }
+      .blue-text {
+        color: blue;
+      }
+    </style> -->
+    <!-- href="CSS/style.css" | CSS/ because it is located in the css folder-->
+    <!-- <link rel="stylesheet" type="text/css" href="CSS/style.css" /> -->
+  </head>
+  <body>
+    <h2>CatPhotoApp</h2>
+    <main>
+      <h3 style="color: red">Cat Photos</h3>
+      <!-- TODO: Add link to cat photos -->
+      <p class="blue-text">
+        Click here to view more
+        <a href="#" target="_blank">cat photos</a>
+      </p>
+      <a href="#"
+        ><img
+          src="https://cdn.shopify.com/s/files/1/0052/6198/3830/products/The-Ambassador-Poster_950x.jpg?v=1587117943"
+          alt="A cute cat"
+      /></a>
+
+      <h3>Cat Lists</h3>
+      <div class="lists">
+        <p>Things cats <em>love</em>:</p>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointer</li>
+          <li>lasagna</li>
+        </ul>
+        <img src="/images/lasagna.jpg" alt="Lasagna" />
+        <p>Things cat <strong>hate</strong>:</p>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+      </div>
+      <img src="/images/cats.jpeg" alt="Cats" />
+
+      <form action="/submit-cat-photo">
+        <label for="snow">
+          <input id="snow" type="radio" name="snow" checked />
+          Snow </label
+        ><br />
+        <label for="indoor">
+          <input id="indoor" type="radio" name="indoor-outdoor" />
+          Indoor </label
+        ><br />
+        <label for="outdoor">
+          <input id="outdoor" type="radio" name="indoor-outdoor" /> Outdoor
+        </label>
+        <br />
+
+        <label for="loving"
+          ><input id="loving" type="checkbox" name="personality" checked />
+          Loving </label
+        ><br />
+        <label for="lazy"
+          ><input id="lazy" type="checkbox" name="personality" /> Lazy </label
+        ><br />
+        <label for="energetic"
+          ><input id="energetic" type="checkbox" name="personality" />
+          Energetic </label
+        ><br />
+
+        <input type="text" placeholder="cat photo URL" required /> <br />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        <small>
+          No Copyright -
+          <a href="https://www.youtube.com/watch?v=916GWv2Qs08" target="_blank">
+            freeCodeCamp.org</a
+          >
+        </small>
+      </p>
+    </footer>
+  </body>
+</html>

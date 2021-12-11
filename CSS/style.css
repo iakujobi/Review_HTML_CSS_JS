@@ -1,0 +1,236 @@
+/* CSS Selectors 
+
+a {background-color: yellow; }
+
+a: selector (this will target this tag every where it appears).
+    NOTE: if we want to target a specific tag, use a class or id
+declaration start and end: {}
+property: background-color
+value: yellow
+declaration separator: ;
+property/value separator- :
+*/
+
+/* Colors in CSS
+- color names
+- HTML5 Color names
+- hexadecimal
+- RGB
+
+Example:
+body{
+    color: red; # color names
+    background: coral; # HTML5 Color names
+}
+SHORTCUT FOR HEXADECIMAL IS 3 DIGITS ONLY
+h1{
+    color: #00ff00; 
+}
+p{
+    color: rgb(0,0,255);
+}
+*/
+
+/* Web Safe Fonts: don't have to import font. We can use them straight away
+Eg: font-family: Arial, Helvetica, sans-serif;
+(Other font can be imported): Example is google font
+*/
+
+/* Class vs Id
+- ID: use for an element that is going to be UNIQUE
+- class: use for elements that are NOT unique. Can reuse them
+NOTE: IF YOU DON'T WANT TO USE THIS RULE, THEN USE ONLY CLASS
+
+ACCESS
+- CLASS: USE A .(DOT)
+*/
+
+/* BOX MODEL - https://www.w3schools.com/css/css_boxmodel.asp
+             - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+Content: Think of content block as where my content is. like a div, paragraph, main, a tag link
+padding: space inside border
+margin: space outside border
+*/
+
+/* Margin & Padding longhand vs Shorthand 
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+p{
+            top right bottom left
+    margin: 5px 10px 5px 10px;
+}
+
+p{
+            top&bottom left&right
+    margin: 5px 10px;
+}
+*/
+
+/* [*] means for every element/style
+use margin and padding = 0 to zero out every default margin and padding before you begin. IF YOU WANT 
+*/
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+/* this is global style: affects all h1 in the example 
+h1 {
+  color: green;
+}
+*/
+
+body {
+  background-color: #f4f4f4;
+  color: #555555;
+
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; /*the default font size is 16px
+  font-weight: normal; */
+
+  font: normal 16px Arial, Helvetica, sans-serif; /*short way to write the 3 lines on top*/
+
+  /* Provide height between the lines */
+  line-height: 1.6em;
+
+  /* moves elements to the edge */
+  margin: 0;
+}
+
+/* another global style
+[a] tags have different states
+*/
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* [a] tag states */
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
+
+/* a:visited {
+  /* this affects the Read More Button Color */
+/* color: #000;  
+} */
+
+/* use percentage for containers to make them responsive */
+.container {
+  /* contain the elements in a box */
+  width: 80%;
+  /* margin: spacing around an element
+    auto: makes the website responsive */
+  margin: auto;
+}
+
+/* global style */
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.button:hover {
+  background: red;
+  color: #fff;
+}
+
+.box-1 {
+  background-color: #333;
+  color: #fff;
+
+  /* border-right: 5px red solid;
+  border-left: 5px red solid;
+  border-top: 5px red solid;
+  border-bottom: 5px red solid; */
+
+  /* same as above 4 lines */
+  border: 5px red solid;
+
+  /* use to target individual border edge */
+  border-width: 3px;
+  border-bottom-width: 10px;
+  border-top-style: dotted;
+
+  /* padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px; */
+
+  /* SAME AS ABOVE 4 lines */
+  padding: 20px;
+
+  /* margin is space outside of border 
+  20px for top and bottom
+  0 for left and right */
+  margin: 20px 0;
+}
+
+/* only targets h1 in this class called box-1 */
+.box-1 h1 {
+  font-family: Tahoma;
+  font-weight: 800;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  word-spacing: 1em;
+}
+
+.box-2 {
+  border: 3px dotted #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.categories {
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 15px; /*gives the rounded edges*/
+}
+
+.categories h2 {
+  text-align: center;
+}
+
+.categories ul {
+  padding: 0;
+  padding-left: 20px;
+  list-style: none; /*changes the style of the list*/
+}
+
+.categories li {
+  padding-bottom: 6px;
+  border-bottom: dotted 1px #333;
+  list-style-image: url(../images/check.png);
+}
+
+.my-form {
+  padding: 20px;
+}
+
+/* to give spacing to the form elements */
+.my-form .form-group {
+  padding-bottom: 15px;
+}
+
+.my-form label {
+  display: block; /* labels on their own line */
+}
+
+.my-form input[type="text"],
+.my-form textarea {
+  padding: 8px;
+  width: 100%;
+}
