@@ -147,6 +147,11 @@ a:active {
   color: #fff;
 }
 
+/* Clears any float below the box  */
+.clr {
+  clear: both;
+}
+
 .box-1 {
   background-color: #333;
   color: #fff;
@@ -245,3 +250,5 @@ a:active {
   padding: 10px;
   box-sizing: border-box;
 }
+
+/* floating box elements that are not the same width */
