@@ -1,4 +1,6 @@
 /* CSS Selectors 
+[#]: for id
+[.]: for class
 
 a {background-color: yellow; }
 
@@ -247,8 +249,24 @@ a:active {
   float: left;
   width: 33.3%;
   border: 1px solid #ccc;
+  /* The 2 lines below give the box styling to the elements and float them */
   padding: 10px;
   box-sizing: border-box;
 }
 
 /* floating box elements that are not the same width */
+#main-block {
+  float: left;
+  width: 70%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
