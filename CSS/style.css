@@ -235,3 +235,13 @@ a:active {
   padding: 8px;
   width: 100%;
 }
+
+/* Flex box can take care of these lines in (.block) below. But that is too advanced for now */
+/* This is about alignment and floating */
+.block {
+  float: left;
+  width: 33.3%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
